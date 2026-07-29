@@ -18,8 +18,11 @@ The platform enforces role-based access control, applies Microsoft Purview sensi
 
 <img width="1536" height="1024" alt="ChatGPT Image Jul 29, 2026, 04_04_25 PM" src="https://github.com/user-attachments/assets/a4d56e4f-4557-4bc2-a372-fdc7f1aa1021" />
 
-
 ## Environment
+
+This project was built within a Microsoft 365 developer tenant to simulate a secure enterprise environment for a fictional clinical research organization. The environment combines IAM, data governance, AI powered document retrieval, and security monitoring to demonstrate how sensitive organizational data can be protected throughout the AI lifecycle.
+
+The environment uses Microsoft Entra ID for identity and RBAC, Microsoft Purview for data classification and Data Loss Prevention (DLP), Azure AI Search and Azure OpenAI for Retrieval-Augmented Generation (RAG), and Microsoft Sentinel with Log Analytics for centralized auditing and security monitoring.
 
 ## Technologies
 
