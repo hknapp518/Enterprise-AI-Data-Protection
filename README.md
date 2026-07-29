@@ -26,6 +26,15 @@ The environment uses Microsoft Entra ID for identity and RBAC, Microsoft Purview
 
 ## Technologies
 
+| Category | Technologies |
+|----------|--------------|
+| Identity & Access | Microsoft Entra ID |
+| Data Protection | Microsoft Purview, Microsoft Purview Information Protection, Data Loss Prevention (DLP), Sensitivity Labels |
+| AI & Search | Azure OpenAI, Azure AI Search, Retrieval-Augmented Generation (RAG) |
+| Security Monitoring | Microsoft Sentinel, Azure Log Analytics, Kusto Query Language (KQL) |
+| Automation | Azure Logic Apps |
+| Development | Python, Visual Studio Code, Git, GitHub |
+
 ## Repository Structure
 
 ## Microsoft Purview Implementation
