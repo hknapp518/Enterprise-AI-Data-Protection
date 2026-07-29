@@ -16,6 +16,9 @@ The platform enforces role-based access control, applies Microsoft Purview sensi
 
 ## Architecture
 
+<img width="1536" height="1024" alt="ChatGPT Image Jul 29, 2026, 04_04_25 PM" src="https://github.com/user-attachments/assets/a4d56e4f-4557-4bc2-a372-fdc7f1aa1021" />
+
+
 ## Environment
 
 ## Technologies
