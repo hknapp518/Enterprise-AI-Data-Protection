@@ -8,7 +8,11 @@ Traditional AI applications often lack awareness of document sensitivity, user p
 
 This project demonstrates how Microsoft Purview and Microsoft Entra ID can be integrated with a RAG application to ensure enterprise AI only retrieves and returns data that users are authorized to access while enforcing Data Loss Prevention (DLP), sensitivity labels, and comprehensive audit logging.
 
-## Objectives
+## The Solution
+
+This project simulates a clinical research organization that uses Microsoft Purview, Microsoft Entra ID, and a Retrieval-Augmented Generation (RAG) application to protect sensitive organizational data.
+
+The platform enforces role-based access control, applies Microsoft Purview sensitivity labels, evaluates prompts and responses against DLP policies, and records every interaction for security auditing and compliance investigations.
 
 ## Architecture
 
