@@ -35,16 +35,27 @@ The environment uses Microsoft Entra ID for identity and RBAC, Microsoft Purview
 | Automation | Azure Logic Apps |
 | Development | Python, Visual Studio Code, Git, GitHub |
 
-## Repository Structure
+## Key Features
 
-## Microsoft Purview Implementation
+- Microsoft Entra ID authentication and RBAC
+- Microsoft Purview sensitivity labels and DLP policies
+- Secure Retrieval-Augmented Generation (RAG)
+- AI response filtering (Allow, Redact, or Block)
+- Centralized audit logging with Microsoft Sentinel and Log Analytics
+- KQL telemetry for security investigations
 
-## Enterprise AI Security (RAG)
+  ## Repo Structure
 
-## Audit Logging
+```
+Architecture/        High-level architecture and design diagrams
+Application/         Python RAG application
+Documents/           Sample enterprise documents
+Policies/            DLP and sensitivity label configurations
+Purview/             Microsoft Purview implementation and documentation
+Logs/                Sample audit logs
+Dashboard/           Reporting and monitoring
+Screenshots/         Project screenshots
+```
+ ## Future Enhancements
 
-## Future Enhancements
-
-## Screenshots
-
-## Skills Demonstrated
+ - Automated Incident Response – Integrate Microsoft Sentinel and Azure Logic Apps to automatically generate incidents, notify security teams, and initiate response workflows when high-severity DLP policy violations occur.
