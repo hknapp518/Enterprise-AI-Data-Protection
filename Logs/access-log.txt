@@ -1,0 +1,7 @@
+2026-07-29 22:06:59 | Role: Guest | Document: clinical-trial-protocol | Result: DENIED
+2026-07-29 22:07:08 | Role: Guest | Document: employee-payroll-report | Result: DENIED
+2026-07-29 22:07:52 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
+2026-07-29 22:13:05 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
+2026-07-29 22:29:08 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
+2026-07-29 22:31:27 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
+2026-07-29 22:41:39 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
