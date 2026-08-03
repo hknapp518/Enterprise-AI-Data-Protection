@@ -1,42 +1,44 @@
 # Enterprise AI Data Protection Platform
 
-> **A security platform that enables organizations to safely adopt enterprise AI by enforcing Microsoft Entra ID identity controls, Microsoft Purview data governance, and policy-driven access decisions before AI responses are returned.**
+ **Protecting enterprise AI by enforcing identity, data governance, and policy-driven access decisions before sensitive information reaches the user.**
 
 <p align="center">
-  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/bd032d1d-17c0-4b6f-aa89-243627341637" />
+  <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/aefcb038-c1f5-4569-a842-c17af2f3c46f" />
+
 </p>
 
+---
 
 # Business Problem
 
 Organizations are rapidly adopting enterprise AI solutions such as Microsoft 365 Copilot, ChatGPT Enterprise, and custom Retrieval-Augmented Generation (RAG) applications to improve productivity.
 
-While these platforms provide significant business value, they also introduce a critical security challenge.
+However, AI introduces a new security challenge:
 
-> **How do organizations allow employees to use AI without exposing sensitive corporate information to unauthorized users?**
+> **How can organizations enable employees to use AI without exposing sensitive information to unauthorized users?**
 
-Traditional access controls and document permissions alone are not enough. AI applications require an additional security layer capable of evaluating user identity, document sensitivity, organizational policies, and regulatory requirements before generating a response.
+Traditional document permissions alone are no longer sufficient. AI applications require an additional security layer capable of evaluating user identity, document sensitivity, organizational policies, and regulatory requirements **before** information is returned.
 
 Without these controls, organizations risk:
 
 - Unauthorized disclosure of sensitive information
 - Leakage of PHI, PCI, and confidential business data
 - Insider threats and privilege misuse
-- Lack of audit visibility into AI interactions
+- Limited visibility into AI interactions
 - Regulatory compliance violations (HIPAA, PCI DSS, SOX, GDPR)
 
 ---
 
 # Solution
 
-The Enterprise AI Data Protection Platform acts as a security layer between employees and enterprise AI.
+The Enterprise AI Data Protection Platform introduces a policy-driven security layer between enterprise users and AI.
 
-Every AI request is evaluated before a response is returned.
+Instead of allowing the AI model to respond directly, every request is evaluated against organizational security controls before a response is generated.
 
 The platform:
 
 - Authenticates users with Microsoft Entra ID
-- Validates Role-Based Access Control (RBAC)
+- Enforces Role-Based Access Control (RBAC)
 - Evaluates Microsoft Purview sensitivity labels
 - Applies DLP policy enforcement
 - Retrieves only authorized enterprise knowledge
@@ -47,48 +49,23 @@ The platform:
 
 ---
 
-# Solution Architecture
+# Enterprise Use Cases
 
-The platform is designed around a **policy-driven security engine** that evaluates every AI interaction before a response is generated.
+### Healthcare
 
-**Core workflow:**
+Prevent AI from exposing Protected Health Information (PHI) while supporting secure clinical research and healthcare operations.
 
-```
-User
-    │
-    ▼
-Microsoft Entra ID
-(Authentication & RBAC)
-    │
-    ▼
-Enterprise AI Application
-(Python + RAG)
-    │
-    ▼
-Azure AI Search
-(Knowledge Base)
-    │
-    ▼
-Enterprise AI Security Policy Engine
-────────────────────────────────────
-✔ Identity Validation
-✔ RBAC Evaluation
-✔ Microsoft Purview Labels
-✔ DLP Policy Evaluation
-✔ Prompt Inspection
-✔ Risk Scoring
-────────────────────────────────────
-          │
- ┌────────┼─────────┐
- │        │         │
- ▼        ▼         ▼
-Allow   Redact    Block
-          │
-          ▼
-AI Response
-```
+### Financial Services
 
-Every decision (Allow, Redact, or Block) is logged and forwarded to Splunk Enterprise for monitoring, correlation, and incident response.
+Protect payroll records, financial statements, and PCI-regulated information from unauthorized AI access.
+
+### Manufacturing
+
+Prevent intellectual property, engineering documentation, and proprietary research from being exposed through enterprise AI.
+
+### Government
+
+Support Zero Trust principles by enforcing least-privilege access, auditing AI interactions, and protecting controlled information.
 
 ---
 
@@ -100,16 +77,17 @@ Every decision (Allow, Redact, or Block) is logged and forwarded to Splunk Enter
 
 ### Security Evaluation
 
-1. User identity is verified through Microsoft Entra ID.
+1. The user authenticates through Microsoft Entra ID.
 2. Azure AI Search retrieves relevant enterprise documents.
 3. The Enterprise AI Security Policy Engine evaluates:
+   - User identity
    - RBAC permissions
    - Microsoft Purview sensitivity labels
-   - DLP policy requirements
+   - DLP policies
    - Prompt risk indicators
 4. The request is **blocked** because the user is not authorized.
-5. The event is logged and forwarded to Splunk Enterprise.
-6. Correlation rules determine whether additional investigation or automated response is required.
+5. The event is forwarded to Splunk Enterprise.
+6. Detection rules determine whether additional investigation or automated response is required.
 
 ---
 
@@ -152,7 +130,9 @@ Every decision (Allow, Redact, or Block) is logged and forwarded to Splunk Enter
 
 # Business Value
 
-This project demonstrates how organizations can safely adopt enterprise AI while maintaining strong security and governance controls.
+Organizations increasingly need AI solutions that improve productivity **without compromising security or compliance**.
+
+This project demonstrates how enterprise AI can be secured through a combination of identity, governance, data protection, and security operations.
 
 Business outcomes include:
 
@@ -170,7 +150,7 @@ Business outcomes include:
 | Category | Technologies |
 |-----------|--------------|
 | Identity | Microsoft Entra ID |
-| AI | Python, Azure AI Search, Azure OpenAI / OpenAI |
+| AI | Python, Azure AI Search, Azure OpenAI |
 | Data Protection | Microsoft Purview, Sensitivity Labels, DLP |
 | Monitoring | Splunk Enterprise |
 | Automation | Azure Logic Apps |
@@ -180,17 +160,17 @@ Business outcomes include:
 
 # Future Enhancements
 
-- Real-time Microsoft Graph integration
-- Live Microsoft Purview label retrieval
-- Splunk dashboards for AI governance
-- Insider risk behavior analytics
+- Live Microsoft Graph integration
+- Real-time Microsoft Purview label evaluation
 - AI risk scoring and anomaly detection
+- Splunk dashboards for AI governance
 - ServiceNow incident creation through SOAR automation
+- Insider risk behavior analytics
 
 ---
 
 # Project Goal
 
-The objective of this project is to demonstrate how enterprise organizations can securely adopt AI by combining identity, governance, data protection, and security operations into a unified architecture.
+This project demonstrates how enterprise organizations can securely adopt AI by integrating identity, governance, data protection, and security operations into a unified security architecture.
 
-Rather than functioning as a traditional chatbot, this platform serves as a **security layer** that evaluates every AI interaction before sensitive information is returned to the user.
+Rather than functioning as a traditional chatbot, the platform acts as a **security control layer** that evaluates every AI interaction before sensitive information is returned to the user.
