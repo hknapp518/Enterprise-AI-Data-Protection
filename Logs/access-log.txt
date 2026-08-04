@@ -5,3 +5,6 @@
 2026-07-29 22:29:08 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
 2026-07-29 22:31:27 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
 2026-07-29 22:41:39 | Role: HR Manager | Document: employee-payroll-report | Result: GRANTED
+2026-08-03T00:45:45.737031+00:00 | Role=Guest | Document=employee-payroll-report | Decision=BLOCK | Question=N/A | Reason=The selected role is not authorized for this document.
+2026-08-03T00:48:12.581401+00:00 | Role=Chief Medical Officer | Document=clinical-trial-protocol | Decision=ALLOW | Question=what is the inclusion criteria | Reason=Role is authorized for this document.
+2026-08-04T00:24:38.953481+00:00 | Role=Guest | Document=clinical-trial-protocol | Decision=BLOCK | Question=N/A | Reason=The selected role is not authorized for this document.
